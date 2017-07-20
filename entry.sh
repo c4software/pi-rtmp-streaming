@@ -1,10 +1,27 @@
 #!/bin/bash
 
+while getopts ":a:p:" opt; do
+  case $opt in
+    s) SECRET="$OPTARG"
+    ;;
+    w) W="$OPTARG"
+    ;;
+    h) H="$OPTARG"
+    ;;
+    rtmp) RTMP="$OPTARG"
+    ;;
+    raspi_extra_args) RASPI_EXTRA_ARGS="$OPTARG"
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    ;;
+  esac
+done
+
 SECRET=$1
-W=${2:-"1920"}
-H=${3:-"1080"}
-RTMP=${4:-"rtmp://a.rtmp.youtube.com/live2/"}
-RASPI_EXTRA_ARGS=${5:-""}
+W=${W:-"1920"}
+H=${H:-"1080"}
+RTMP=${RTMP:-"rtmp://a.rtmp.youtube.com/live2/"}
+RASPI_EXTRA_ARGS=${RASPI_EXTRA_ARGS:-""}
 
 echo Live-stream secret: $1
 
