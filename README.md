@@ -13,9 +13,18 @@
 - docker build -t pi-youtube-live/streaming . # Can take a while 
 - docker run --rm --privileged --name cam pi-youtube-live/streaming:latest your-youtube-private-streaming-key 1080 720
 
+## Usage
+
+```
+docker run --rm --privileged --name cam alexellis2/streaming:latest -s YOUTUBE-SECRET-KEY -w 1080 -h 720 -f "rtmp://a.rtmp.youtube.com/live2/" -e "-ex verylong -awb sun -rot 270"
+```
+
 ## Parameters
 
-- Youtube Live Key. (Keep it secret !)
-- 1080, The X resolution of the Webkam feed.
-- 720, The Y resolution of the Webcam feed.
-
+```
+-s YOUTUBE SECRET KEY 
+-w VIDEO WIDTH
+-h VIDEO HEIGH
+-f RTMP URL SERVER
+-e EXTRA ARGS TO THE RASPIVID COMMANDS 
+```
