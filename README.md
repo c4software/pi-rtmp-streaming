@@ -1,4 +1,4 @@
-# Live Youtube Streaming with the Raspberry Pi Zero W
+# Live Youtube (or other RTMP server) Streaming with the Raspberry Pi Zero W
 
 ## Install Docker
 
