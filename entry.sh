@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts ":a:p:" opt; do
+while getopts ":s:w:h:rtmp:raspi_extra_args:" opt; do
   case $opt in
     s) SECRET="$OPTARG"
     ;;
