@@ -1,4 +1,4 @@
-# Live Youtube (or other RTMP server) Streaming with the Raspberry Pi Zero W
+# Stream with to Youtube (or any RTMP server) with the Raspberry Pi Zero and Zero W
 
 ## Install Docker
 
@@ -21,7 +21,7 @@ docker run --rm --privileged --name cam alexellis2/streaming:latest -s YOUTUBE-S
 
 ## Parameters
 
-```
+```sh
 -s YOUTUBE SECRET KEY 
 -w VIDEO WIDTH
 -h VIDEO HEIGH
