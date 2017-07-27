@@ -28,3 +28,7 @@ docker run --rm --privileged --name cam alexellis2/streaming:latest -s YOUTUBE-S
 -f RTMP URL SERVER
 -e EXTRA ARGS TO THE RASPIVID COMMANDS 
 ```
+
+## Credits
+
+Thanks to alexellis2 for the based image.
